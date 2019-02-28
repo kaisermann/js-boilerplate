@@ -7,6 +7,7 @@ const ERROR = 'error'
 module.exports = {
   root: true,
   extends: ['airbnb-base', 'prettier', 'plugin:import/recommended'],
+  plugins: ['prettier', 'import'],
   env: {
     browser: true,
     node: true,
