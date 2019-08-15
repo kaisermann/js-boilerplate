@@ -2,11 +2,19 @@
   "name": "js-boilerplate",
   "version": "1.0.0",
   "author": "Christian Kaisermann <christian@kaisermann.me>",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "test": "jest --no-cache",
     "test:watch": "jest --no-cache --watchAll",
     "lint": "eslint \"src/**/*.js\"",
-    "format": "prettier --loglevel silent --write \"src/**/*.js\" && eslint --fix \"src/**/*.js\""
+    "format": "prettier --loglevel silent --write \"src/**/*.js\" && eslint --fix \"src/**/*.js\"",
+    "version": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "tag": "git tag -a v$npm_package_version -m 'Release v$npm_package_version'",
+    "release": "npm run build && npm run version && git add package.json && git commit -m \"chore: release v$npm_package_version\"",
+    "prepublishOnly": "npm run release && npm run tag"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
@@ -17,6 +25,8 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "jest": "^24.1.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "rollup": "^1.19.4",
+    "rollup-plugin-terser": "^5.1.1"
   }
 }
