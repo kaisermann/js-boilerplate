@@ -17,16 +17,11 @@
     "prepublishOnly": "npm run release && npm run tag"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "jest": "^24.1.0",
-    "prettier": "^1.16.4",
-    "rollup": "^1.19.4",
-    "rollup-plugin-terser": "^5.1.1"
+    "eslint": "^6.6.0",
+    "eslint-config-kaisermann": "0.0.3",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.26.3",
+    "rollup-plugin-terser": "^5.1.2"
   }
 }
