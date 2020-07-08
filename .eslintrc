@@ -1,6 +1,3 @@
 {
-  "extends": ["kaisermann"],
-  "parserOptions": {
-    "sourceType": "module"
-  }
+  "extends": ["kiwi"]
 }
